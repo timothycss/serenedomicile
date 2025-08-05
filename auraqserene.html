@@ -233,6 +233,41 @@
         padding: 4px 6px;
       }
     }
+    /* ...existing code... */
+.video-hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Ensure .video-hero fills the viewport on all devices */
+.video-hero {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 90px;
+}
+
+/* Responsive: override height for mobile/tablet */
+@media (max-width: 900px) {
+  .video-hero,
+  .video-hero img,
+  .bg-video,
+  .video-overlay {
+    min-height: 100vh !important;
+    height: 100vh !important;
+    width: 100vw !important;
+  }
+}
+/* ...existing code... */
     .about {
       margin-top: 10px;
       display: inline-block;
